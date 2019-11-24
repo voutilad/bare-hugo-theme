@@ -1,10 +1,18 @@
-# Bare
+This is a fork of the [bare-hugo-theme][https://github.com/orf/bare-hugo-theme].
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e25dc0cd-2a9e-4c4e-bf39-c5e558d967e7/deploy-status)](https://app.netlify.com/sites/hugo-bare-theme/deploys)
+Some things I've changed:
+
+- hardcoded some nav bar entries
+- blacklist some tags from becoming nav entries
+- remove gravatar stuff cause I don't use it
+
+
+---
+# Bare
 
 Preview: https://hugo-bare-theme.netlify.com/
 
-A speed-focused, minimalist Hugo blog theme based on [Bulma.io](https://bulma.io/). Looks 
+A speed-focused, minimalist Hugo blog theme based on [Bulma.io](https://bulma.io/). Looks
 great on mobile and loads in a flash.
 
 Homepage   |  Post | Mobile
@@ -37,20 +45,20 @@ includeAuthorInTitle = true
 ```
 
 
-The theme will pull posts from the content sections you define in `mainSections`. In the example above 
+The theme will pull posts from the content sections you define in `mainSections`. In the example above
 all posts from `content/posts` will be included in the homepage.
 
 ### PostCSS
 
-You can use `postcss` to strip out all the unused Bulma CSS rules. This brings the CSS bundle down 
-from 180kb to 10kb. 
+You can use `postcss` to strip out all the unused Bulma CSS rules. This brings the CSS bundle down
+from 180kb to 10kb.
 
-To enable this set `params.postcss` to `true` in your `config.toml`. Then, copy the `package.json` and the 
+To enable this set `params.postcss` to `true` in your `config.toml`. Then, copy the `package.json` and the
 `postcss.config.js` into your repository and run `npm install`.
 
 ### Social buttons
 
-Social buttons can be configured by adding a `params.social` array. Icons come from 
+Social buttons can be configured by adding a `params.social` array. Icons come from
 https://materialdesignicons.com/:
 
 ```toml
@@ -65,5 +73,5 @@ url = "https://linkedin.com/in/my-username"
 
 ### Hiding the theme link
 
-I get it, you might not want to have a link to this repo on the footer of your blog. Add `disableAttribution` to your 
-site parameters and it will be hidden. 
+I get it, you might not want to have a link to this repo on the footer of your blog. Add `disableAttribution` to your
+site parameters and it will be hidden.
