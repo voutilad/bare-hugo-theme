@@ -2,17 +2,23 @@
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ $.Site.Home.Permalink }}">
       <figure class="image">
-        <img alt="" class="is-rounded" src="https://www.gravatar.com/avatar/{{ md5 $.Site.Params.email }}?s=128&d=identicon">
+        <img alt="(my avatar)" class="is-rounded" src="/img/avatar.jpg">
       </figure>
     </a>
     <a class="navbar-item" href="{{ $.Site.Home.Permalink }}">
       {{ $.Site.Title }}
     </a>
+    <div class="navbar-item">|</div>
   </div>
-  
+
   <div class="navbar-menu">
     <div class="navbar-start">
+      <a class="navbar-item" href="/about">About</a>
+      <a class="navbar-item" href="/tags/openbsd/">OpenBSD</a>
+      <a class="navbar-item" href="/presentations">Presentations</a>
+      <div class="navbar-item">| &nbsp; Other Categories:</div>
       {{ range .Site.Taxonomies.tags }}
+      {{ if not (in $.Site.Params.hardcodedTags (lower .Page.Title)) }}
       <a class="navbar-item" href="{{ .Page.Permalink }}">
         {{ if (eq .Page.Title (upper .Page.Title )) }}
         {{ .Page.Title  }}
@@ -21,8 +27,9 @@
         {{ end }}
       </a>
       {{ end }}
+      {{ end }}
     </div>
-    
+
     <div class="navbar-end">
       {{ range $.Site.Params.social }}
       <a class="navbar-item" href="{{ .url }}" rel="noopener" target="_blank">
