@@ -2,7 +2,7 @@
 <div class="container">
   <article class="media">
     <figure class="image is-64x64 media-left">
-      <img alt="" class="is-rounded" src="./img/avatar.jpg"
+      <img alt="" class="is-rounded" src="./img/avatar-64px.jpg"
            width="32" height="32">
     </figure>
     <div class="media-content">
@@ -18,5 +18,6 @@
 {{ end }}
 
 {{ define "main" }}
+<h2 class="title">Recent Posts</h2>
 {{ partial "posts.html" (where site.RegularPages "Type" "in" site.Params.mainSections) }}
 {{ end }}

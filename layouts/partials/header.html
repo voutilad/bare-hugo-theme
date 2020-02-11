@@ -2,7 +2,7 @@
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ $.Site.Home.Permalink }}">
       <figure class="image">
-        <img alt="(my avatar)" class="is-rounded" src="/img/avatar.jpg">
+        <img alt="(my avatar)" class="is-rounded" src="/img/avatar-64px.jpg">
       </figure>
     </a>
     <a class="navbar-item" href="{{ $.Site.Home.Permalink }}">
@@ -15,6 +15,7 @@
     <div class="navbar-start">
       <a class="navbar-item" href="/about">About</a>
       <a class="navbar-item" href="/tags/openbsd/">OpenBSD</a>
+      <a class="navbar-item" href="/tags/neo4j/">Neo4j</a>
       <a class="navbar-item" href="/presentations">Presentations</a>
       <div class="navbar-item">| &nbsp; Other Categories:</div>
       {{ range .Site.Taxonomies.tags }}
